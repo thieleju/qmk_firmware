@@ -723,6 +723,9 @@ enum qk_keycode_defines {
     QK_TRI_LAYER_UPPER = 0x7C78,
     QK_REPEAT_KEY = 0x7C79,
     QK_ALT_REPEAT_KEY = 0x7C7A,
+    QK_KEY_CANCELLATION_ON = 0x7C7B,
+    QK_KEY_CANCELLATION_OFF = 0x7C7C,
+    QK_KEY_CANCELLATION_TOGGLE = 0x7C7D,
     QK_LAYER_LOCK = 0x7C7B,
     QK_KB_0 = 0x7E00,
     QK_KB_1 = 0x7E01,
@@ -1368,6 +1371,9 @@ enum qk_keycode_defines {
     QK_REP     = QK_REPEAT_KEY,
     QK_AREP    = QK_ALT_REPEAT_KEY,
     QK_LLCK    = QK_LAYER_LOCK,
+    KX_CAON    = QK_KEY_CANCELLATION_ON,
+    KX_CAOF    = QK_KEY_CANCELLATION_OFF,
+    KX_CATG    = QK_KEY_CANCELLATION_TOGGLE,
 };
 
 // Range Helpers
@@ -1422,3 +1428,6 @@ enum qk_keycode_defines {
 #define IS_QUANTUM_KEYCODE(code) ((code) >= QK_BOOTLOADER && (code) <= QK_LAYER_LOCK)
 #define IS_KB_KEYCODE(code) ((code) >= QK_KB_0 && (code) <= QK_KB_31)
 #define IS_USER_KEYCODE(code) ((code) >= QK_USER_0 && (code) <= QK_USER_31)
+
+// Switch statement Helpers
+#define QUANTUM_KEYCODE_RANGE               QK_BOOTLOADER ... QK_KEY_CANCELLATION_TOGGLE
