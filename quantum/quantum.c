@@ -69,6 +69,10 @@
 #    include "process_unicode_common.h"
 #endif
 
+#ifdef KEY_CANCELLATION_ENABLE
+#    include "process_key_cancellation.h"
+#endif
+
 #ifdef VELOCIKEY_ENABLE
 #    include "velocikey.h"
 #endif
@@ -404,6 +408,9 @@ bool process_record_quantum(keyrecord_t *record) {
 #endif
 #ifdef LAYER_LOCK_ENABLE
             process_layer_lock(keycode, record) &&
+#endif
+#ifdef KEY_CANCELLATION_ENABLE
+            process_key_cancellation(keycode, record) &&
 #endif
             true)) {
         return false;

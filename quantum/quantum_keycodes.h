@@ -33,6 +33,9 @@
 #define QK_RSFT                0x1200
 #define QK_RALT                0x1400
 #define QK_RGUI                0x1800
+#define QK_KEY_CANCELLATION_ON 0x7C7B
+#define QK_KEY_CANCELLATION_OFF 0x7C7C
+#define QK_KEY_CANCELLATION_TOGGLE 0x7C7D
 
 #define SAFE_RANGE             QK_USER
 // clang-format on
