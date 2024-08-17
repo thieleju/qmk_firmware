@@ -43,7 +43,6 @@ const key_cancellation_t PROGMEM key_cancellation_list[] = {
     [4] = {KC_J, KC_K},
     [5] = {KC_K, KC_J},
 };
-#endif
 
 enum tap_dance_codes {
   DANCE_0,
